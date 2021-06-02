@@ -1,0 +1,8 @@
+Manifest-Version: 0.0.1
+Main-Function: main
+Courses: courses
+Project-Name: AnalyzingQualityTime
+Require-Libraries: |lib://python-air|,|lib://js-air|
+Main-Module: Plugin
+Source: src
+
