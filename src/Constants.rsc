@@ -17,10 +17,10 @@ rel[str, loc] defDocs(set[Module] ms)
     ;
     
 rel[str, loc] undocumentedDefs1(set[Module] ms)
-    = { <"<n>", l> | / /functionDef|asyncFunctionDef/(n, _, ![expr(constant(string(c), _)), *_], _, _, _, src=l) := ms};
+    = { <"<n>", l> | / /functionDef|asyncFunctionDef/(n, _, ![expr(constant(string(_), _)), *_], _, _, _, src=l) := ms};
     
 rel[str, loc] undocumentedDefs2(set[Module] ms)
-    = { <"<n>", l> | / /functionDef|asyncFunctionDef/(n, _, ![expr(constant(string(c), _)), *_], _, _, _, src=l) := ms
+    = { <"<n>", l> | / /functionDef|asyncFunctionDef/(n, _, ![expr(constant(string(_), _)), *_], _, _, _, src=l) := ms
       , /__init.*/ !:= "<n>"
       };    
       
